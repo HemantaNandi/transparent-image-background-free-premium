@@ -167,7 +167,7 @@ const BackgroundRemover = () => {
   }, [history, historyIndex]);
 
   return (
-    <div>
+    <div className="main-content">
       <div className="controls top-controls">
         <label htmlFor="file-upload" className="custom-file-upload">
           <input

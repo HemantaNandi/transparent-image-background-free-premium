@@ -30,6 +30,12 @@
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: calc(20px + 2vmin);
+  }
+}
+
 .App-title-text {
   /* Stylish transparent.pics */
   font-family: 'Arial', sans-serif;
@@ -42,11 +48,30 @@
   text-align: center;
 }
 
+.main-content {
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+}
+
 .content-container {
   display: flex;
   justify-content: center;
   gap: 30px;
   padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .image-section {
@@ -65,6 +90,13 @@
   align-items: center;
   overflow: hidden; /* Ensure content stays within the box */
   margin: 10px auto;
+}
+
+@media (max-width: 768px) {
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .image-wrapper img {
