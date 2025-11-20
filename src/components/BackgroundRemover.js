@@ -10,8 +10,6 @@ const BackgroundRemover = () => {
   const [loading, setLoading] = useState(false);
   const [imageSize] = useState('preview'); // 'preview' or 'auto'
   const [error, setError] = useState(null);
-  const [history, setHistory] = useState([]);
-  const [historyIndex, setHistoryIndex] = useState(-1);
 
   const API_KEY = process.env.REACT_APP_REMOVE_BG_API_KEY;
   const API_URL = `https://api.remove.bg/v1.0/removebg`;
@@ -107,10 +105,6 @@ const BackgroundRemover = () => {
       const newBgRemovedImage = `data:${contentType};base64,${base64Image}`;
       setBgRemovedImage(newBgRemovedImage);
 
-      const newHistory = history.slice(0, historyIndex + 1);
-      newHistory.push(newBgRemovedImage);
-      setHistory(newHistory);
-      setHistoryIndex(newHistory.length - 1);
     } catch (err) {
       console.error("Background removal error:", err);
       setError('Failed to remove background. Check console for details or if API key is valid.');
@@ -152,20 +146,6 @@ const BackgroundRemover = () => {
     }
   };
 
-  const undo = useCallback(() => {
-    if (historyIndex > 0) {
-      setHistoryIndex(historyIndex - 1);
-      setBgRemovedImage(history[historyIndex - 1]);
-    }
-  }, [history, historyIndex]);
-
-  const redo = useCallback(() => {
-    if (historyIndex < history.length - 1) {
-      setHistoryIndex(historyIndex + 1);
-      setBgRemovedImage(history[historyIndex + 1]);
-    }
-  }, [history, historyIndex]);
-
   return (
     <div className="main-content">
       <div className="controls top-controls">
@@ -201,8 +181,6 @@ const BackgroundRemover = () => {
             >
               Download
             </button>
-            <button onClick={undo} disabled={historyIndex <= 0}>Undo</button>
-            <button onClick={redo} disabled={historyIndex >= history.length - 1}>Redo</button>
           </>
         )}
       </div>
