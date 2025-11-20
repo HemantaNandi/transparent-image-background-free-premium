@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import BackgroundRemover from './components/BackgroundRemover';
 
 function App() {
+  useEffect(() => {
+    document.title = 'Free Image Background Remover | transparent.pics';
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
