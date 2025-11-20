@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         <div className="header-content">
           <h1 className="App-title-text">transparent.pics</h1>
-          <p>Image Background Remover</p>
+          <h2>Image Background Remover</h2>
         </div>
       </header>
       <main>

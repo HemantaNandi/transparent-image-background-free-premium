@@ -36,6 +36,18 @@
   }
 }
 
+.App-header h2 {
+  font-size: 1.5rem;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .App-header h2 {
+    font-size: 1.2rem;
+  }
+}
+
 .App-title-text {
   /* Stylish transparent.pics */
   font-family: 'Arial', sans-serif;
@@ -46,6 +58,12 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .App-title-text {
+    font-size: 48px;
+  }
 }
 
 .main-content {
