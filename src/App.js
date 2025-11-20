@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import BackgroundRemover from './components/BackgroundRemover';
-import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
       <main>
         <BackgroundRemover />
       </main>
-      <Footer />
     </div>
   );
 }
