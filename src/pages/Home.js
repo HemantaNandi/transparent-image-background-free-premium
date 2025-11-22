@@ -175,10 +175,14 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center">
-      <div className="max-w-xl w-full p-8 space-y-8 bg-white rounded-xl shadow-md">
+      <div className="max-w-xl mx-auto my-12 p-8 space-y-8 bg-white rounded-xl shadow-md">
+        
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900">Image Background Remover</h1>
+          <h1 class="text-5xl font-extrabold text-transparent bg-clip-text [-webkit-background-clip:text] bg-gradient-to-tr from-violet-600 via-violet-600 via-50% to-purple-900 drop-shadow-md">
+  transparent.pics
+</h1><br/>
+          <h1 className="text-2xl font-bold text-gray-900">Free AI Image Background Remover
+</h1>
           <p className="mt-2 text-lg text-gray-600">Upload an image to remove the background.</p>
         </div>
         
@@ -219,7 +223,6 @@ const Home = () => {
           </button>
         </div>
       </div>
-    </div>
   );
 };
 
